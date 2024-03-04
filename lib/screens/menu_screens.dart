@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hoja_vida/screens/estudios_screens.dart';
+import 'package:hoja_vida/screens/habilidades_screens.dart';
 
 class MenuScreens extends StatefulWidget {
   const MenuScreens({super.key});
@@ -35,10 +36,15 @@ class _MenuScreensState extends State<MenuScreens> {
             },
             
           ),
-           const ListTile(title: Text("Habilidades"),
-            subtitle: Text("Historial de habilidades"),
-            leading: Icon(Icons.abc,color: Colors.black),
-            trailing: Icon(Icons.navigate_next_outlined),
+            ListTile(title: const Text("Habilidades"),
+            subtitle: const Text("Historial de habilidades"),
+            leading: const Icon(Icons.abc,color: Colors.black),
+            trailing: const Icon(Icons.navigate_next_outlined),
+            onTap: (){
+              final route = MaterialPageRoute(
+                builder: (context)=> const HabilidadesScreens() );
+                Navigator.push(context, route);
+            },
             
             
           ),
